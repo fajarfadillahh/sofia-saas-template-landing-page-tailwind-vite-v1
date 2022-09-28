@@ -1,4 +1,31 @@
+/* ===== FONT GOOGLE ===== */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&display=swap");
+
 /* ===== Add the Tailwind directives to your CSS ===== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===== REUSABLE CSS CLASS ===== */
+@layer components {
+  /* section class */
+  .section {
+    @apply pt-32 pb-16;
+  }
+  .section-title {
+    @apply text-[28px] text-gray-900 font-bold capitalize mb-4 leading-normal;
+  }
+  .section-text {
+    @apply text-[15px] text-gray-400 leading-loose;
+  }
+
+  /* button class */
+  .button {
+    @apply inline-block py-4 px-8 bg-blue-500 rounded-lg text-[15px] text-white font-medium;
+  }
+
+  /* container class */
+  .container {
+    @apply max-w-[1024px] w-[calc(100%-3rem)] mx-auto;
+  }
+}
