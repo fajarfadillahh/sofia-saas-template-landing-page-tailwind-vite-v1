@@ -48,8 +48,11 @@
           Sofia.
         </a>
 
-        <div class="header__menu dark:bg-gray-700" id="header-menu">
-          <ul class="header__list flex flex-col gap-6">
+        <div
+          class="header__menu dark:bg-gray-700 md:flex md:items-center md:gap-6"
+          id="header-menu"
+        >
+          <ul class="header__list flex flex-col gap-6 md:flex-row">
             <li class="header__item">
               <a href="#" class="header__link">Home</a>
             </li>
@@ -66,7 +69,7 @@
 
           <!-- theme toggle -->
           <div
-            class="header__theme inline-flex absolute top-4 right-4 text-[2rem] cursor-pointer"
+            class="header__theme inline-flex absolute top-4 right-4 text-[2rem] cursor-pointer md:relative md:top-0 md:right-0"
             id="theme-toggle"
           >
             <span class="header__icon hidden" id="theme-toggle-dark-icon"
@@ -77,11 +80,13 @@
             >
           </div>
 
-          <a href="#" class="header__button button w-full mt-6">Account</a>
+          <a href="#" class="header__button button w-full mt-6 md:mt-0"
+            >Account</a
+          >
         </div>
 
         <div
-          class="header__toggle inline-flex text-[2rem] text-gray-900 cursor-pointer transition-all duration-300 dark:text-white"
+          class="header__toggle inline-flex text-[2rem] text-gray-900 cursor-pointer transition-all duration-300 dark:text-white md:hidden"
           id="header-toggle"
         >
           <i class="bx bx-grid-alt"></i>
