@@ -15,11 +15,26 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- On page load or when changing themes, best to add inline in `head` to avoid FOUC -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
-  <body class="font-body font-reguler bg-blue-50">
+  <body
+    class="font-body font-reguler bg-blue-50 transition-all duration-300 dark:bg-gray-900"
+  >
     <!-- ===== HEADER SECTION ===== -->
     <header
-      class="header fixed w-full top-0 left-0 bg-blue-50 z-50 transition-all duration-300"
+      class="header fixed w-full top-0 left-0 bg-blue-50 z-50 transition-all duration-300 dark:bg-gray-900"
       id="header"
     >
       <div
@@ -27,13 +42,13 @@
       >
         <a
           href="#"
-          class="header__logo inline-flex items-center gap-1 text-xl text-gray-900 font-bold"
+          class="header__logo inline-flex items-center gap-1 text-xl text-gray-900 font-bold transition-all duration-300 dark:text-white"
         >
           <img src="./src/img/icon.svg" alt="" class="header__logo-icon w-8" />
           Sofia.
         </a>
 
-        <div class="header__menu" id="header-menu">
+        <div class="header__menu dark:bg-gray-700" id="header-menu">
           <ul class="header__list flex flex-col gap-6">
             <li class="header__item">
               <a href="#" class="header__link">Home</a>
@@ -54,14 +69,19 @@
             class="header__theme inline-flex absolute top-4 right-4 text-[2rem] cursor-pointer"
             id="theme-toggle"
           >
-            🌙
+            <span class="header__icon hidden" id="theme-toggle-dark-icon"
+              >🌙</span
+            >
+            <span class="header__icon hidden" id="theme-toggle-light-icon"
+              >☀️</span
+            >
           </div>
 
           <a href="#" class="header__button button w-full mt-6">Account</a>
         </div>
 
         <div
-          class="header__toggle inline-flex text-[2rem] text-gray-900 cursor-pointer"
+          class="header__toggle inline-flex text-[2rem] text-gray-900 cursor-pointer transition-all duration-300 dark:text-white"
           id="header-toggle"
         >
           <i class="bx bx-grid-alt"></i>
@@ -75,7 +95,9 @@
       <section class="home section">
         <div class="home__container container grid gap-12">
           <div class="home__data justify-self-center text-center">
-            <h1 class="home__title section-title">
+            <h1
+              class="home__title section-title transition-all duration-300 dark:text-white"
+            >
               Landing Template <br />
               for Startups
             </h1>

@@ -16,7 +16,7 @@
     @apply text-[28px] text-gray-900 font-bold capitalize mb-4 leading-normal;
   }
   .section-text {
-    @apply text-[15px] text-gray-600 leading-loose;
+    @apply text-[15px] text-gray-500 leading-loose;
   }
 
   /* button class */
@@ -37,7 +37,7 @@
   }
 }
 .header__link {
-  @apply text-[15px] text-gray-600 font-medium hover:text-gray-900;
+  @apply text-[15px] text-gray-500 font-medium transition-all duration-300 hover:text-gray-900 dark:text-white dark:hover:text-gray-300;
 }
 /* show menu */
 .header__menu.show-menu {
