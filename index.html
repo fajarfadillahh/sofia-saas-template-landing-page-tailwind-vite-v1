@@ -38,7 +38,7 @@
       id="header"
     >
       <div
-        class="header__container container h-24 flex justify-between items-center"
+        class="header__container container h-24 flex justify-between items-center lg:relative"
       >
         <a
           href="#"
@@ -52,7 +52,9 @@
           class="header__menu dark:bg-gray-700 md:flex md:items-center md:gap-6"
           id="header-menu"
         >
-          <ul class="header__list flex flex-col gap-6 md:flex-row">
+          <ul
+            class="header__list flex flex-col gap-6 md:flex-row lg:absolute lg:left-[50%] lg:-translate-x-[50%] lg:gap-12"
+          >
             <li class="header__item">
               <a href="#" class="header__link">Home</a>
             </li>
@@ -101,7 +103,7 @@
         <div class="home__container container grid gap-12">
           <div class="home__data justify-self-center text-center">
             <h1
-              class="home__title section-title transition-all duration-300 dark:text-white sm:text-[36px]"
+              class="home__title section-title transition-all duration-300 dark:text-white sm:text-[36px] lg:text-[42px]"
             >
               Landing Template <br />
               for Startups
@@ -126,7 +128,7 @@
       <section class="partner pt-8 pb-24">
         <div class="partner__container container">
           <div
-            class="partner__group grid grid-cols-2 justify-center justify-items-center gap-x-8 gap-y-12 xs:grid-cols-[repeat(2,140px)] sm:grid-cols-[repeat(3,140px)]"
+            class="partner__group grid grid-cols-2 justify-center justify-items-center gap-x-8 gap-y-12 xs:grid-cols-[repeat(2,140px)] sm:grid-cols-[repeat(3,140px)] lg:grid-cols-[repeat(5,150px)]"
           >
             <img
               src="./src/img/partner-icon-(1).svg"
